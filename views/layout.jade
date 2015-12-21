@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/luke.css')
+    script(src='/jquery.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7zBxIBoJq6xOCvkiSFuPOTYtv4wU8YJ4&")
+    script(src='/javascripts/map.js')
+  body
+    #mast
+      a(href='/luke') 
+        h1 Luke for BART 9
+    nav
+      ul
+        li#first 
+          a(href='/luke/blog/') Blog
+        li#second 
+          a(href='/luke/goals/') Goals
+        li#third 
+          a(href='/luke/dist/') BART District 9
+        li#last 
+          a(href='/luke/donate/') Donate
+    #cont
+      block content

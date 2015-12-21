@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'simplex';
+  src:url(simplexlight.otf);
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: rgb(255,240,217);
+  text-align: center;
+}
+
+main {
+  font-family: 'simplex', sans-serif;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 80vmin;
+}
+
+div#wrap {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+div#cube {
+  background-image: url(/../images/cube.svg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+div#content {
+  position: relative;
+  width: 91%;
+  height: 91%;
+}
+
+nav {
+  //position: absolute;
+  padding: 5%;
+  font-size: 6vmin;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+#copy {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%); 
+  transform: translateY(-50%); 
+  width: 100%;
+  font-size: 5vmin;
+  color: #BACEB0;
+}
+
+#copy p {
+}
+
+#contact {
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+#contact p {
+  display: block;
+  text-align: right;
+  margin: 5%;
+  font-size: 4vmin;
+}

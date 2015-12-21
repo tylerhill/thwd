@@ -1,0 +1,124 @@
+$height: 100vh
+@font-face 
+  font-family: 'univers'
+  src:url(univers.otf)
+
+html
+  height: 100%
+  padding: 0
+  margin: 0
+  line-height: 1
+
+body
+  background-color: #dee1e3
+  margin: 0
+  height: 100%
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+
+h1, h2, a
+  font-family: 'univers', sans-serif
+
+a
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 0px 2px black;
+
+#mast
+  position: absolute
+  width: 50%
+  text-align: center
+  a
+    display: inline-block
+  h1
+    color: black
+    text-shadow: none
+nav 
+  position: relative
+  display: inline-block
+  width: 100%
+  top: 50%
+  transform: translateY(-50%)
+
+nav ul 
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+nav ul li
+  margin-top: $height / 10
+  margin-bottom: $height / 10
+  font-size: 5vmin
+  padding: 1%
+  padding-left: 10%;
+
+  &#first
+    background-color: #eb1c23
+    margin-top: 0
+  &#second
+    background-color: #ffe600
+  &#third
+    background-color: #00aeed
+  &#last
+    background-color: #4fb849
+    margin-bottom: 0
+
+#cont
+  position: absolute
+  display: inline-block
+  right: 0
+  width: 50%
+  height: 100%
+  background-color: rgba(184,218,242,0.9)
+  text-align: center
+  box-shadow: 0px 0 5px 
+  overflow-y: scroll
+#bio
+#bio p
+  margin: 5%
+#bio img
+  width: 30% 
+  margin: 5%
+  margin-top: 0
+  float: right
+#preview
+  color: white
+  display: inline-block
+  width: 90%
+  border-radius: 10px
+  background-color: rgba(100,100,100,0.9)
+  
+  h1, p
+    text-shadow: none
+    margin: 2%
+iframe 
+  display: inline-block
+  width: 90%
+  height: 250px
+  margin: 5%
+
+#curPost
+  color: white
+  display: inline-block
+  width: 90%
+  border-radius: 10px
+  background-color: rgba(100,100,100,0.9)
+  #prev
+    float: left
+    margin: 2%
+    text-shadow: none
+  #next
+    float: right
+    margin: 2%
+    text-shadow: none
+
+  
+
+#goals 
+  display: inline-block
+  li
+    font-size: 1.5em
+    text-align: left
+#map
+  height: 100%
+  width: 100%
+  
