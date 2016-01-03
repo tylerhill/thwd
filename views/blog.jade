@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  each post in posts
-     p #{post.title}
+  each post, index in posts
+     a(href='/luke/blog/#{index}') #{post.title}
   #curPost
     if current
       h1= posts[current].title
@@ -10,6 +10,6 @@ block content
     else 
       h1= posts[0].title
       p= posts[0].pBody
-    a(href=prev id='prev') prev
-    a(href=next id='next') next
+    a(href='/luke/blog/#{prev}' id='prev') prev
+    a(href='/luke/blog/#{next}' id='next') next
 

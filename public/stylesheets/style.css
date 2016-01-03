@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'simplex';
-  src:url(simplexlight.otf);
+  font-family: 'avant';
+  src:url(/fonts/avant.otf);
 }
 
 html {
@@ -16,7 +16,8 @@ body {
 }
 
 main {
-  font-family: 'simplex', sans-serif;
+  font-family: 'avant', sans-serif;
+  font-weight: normal;
   text-align: center;
   position: relative;
   display: inline-block;
@@ -75,13 +76,14 @@ a {
 #contact {
   color: white;
   position: absolute;
-  width: 100%;
+  text-align: right;
   bottom: 0;
+  padding: 5%;
 }
 
 #contact p {
-  display: block;
-  text-align: right;
-  margin: 5%;
+  margin: 1%;
+  position: relative;
+  display: inline-block;
   font-size: 4vmin;
 }

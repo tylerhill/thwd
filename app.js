@@ -25,7 +25,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static('public'));
 app.use(express.static('node_modules/jquery/dist'));
 app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
@@ -33,6 +32,7 @@ app.use(require('node-sass-middleware')({
   indentedSyntax: true,
   sourceMap: true
 }));
+app.use(express.static('public'));
 
 app.use('/', routes);
 app.use('/luke', luke);
