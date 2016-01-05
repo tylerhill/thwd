@@ -49,8 +49,9 @@ div#content {
 
 nav {
   //position: absolute;
-  padding: 5%;
   font-size: 6vmin;
+  padding-top: 5%;
+  padding-left: 5%;
 }
 
 a {
@@ -65,12 +66,14 @@ a {
   top: 50%;
   -webkit-transform: translateY(-50%); 
   transform: translateY(-50%); 
-  width: 100%;
   font-size: 5vmin;
   color: #BACEB0;
+  padding: 0 5%;
 }
 
 #copy p {
+  position: relative;
+  margin: 2% 0;
 }
 
 #contact {
@@ -78,11 +81,12 @@ a {
   position: absolute;
   text-align: right;
   bottom: 0;
-  padding: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
 }
 
 #contact p {
-  margin: 1%;
+  margin: 1% 0;
   position: relative;
   display: inline-block;
   font-size: 4vmin;
