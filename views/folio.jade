@@ -1,0 +1,9 @@
+extends cube
+
+block content
+  #folio
+    each work, index in works
+       a(href='http://#{work.url}') #{work.title}
+  a#home(href='/') back
+  //#home
+  //  a(href='/') back

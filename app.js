@@ -36,8 +36,8 @@ app.use(require('node-sass-middleware')({
 app.use(express.static('public'));
 
 app.use('/', routes);
-app.use('/luke', luke);
 app.use('/portfolio',folio);
+app.use('/luke', luke);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
