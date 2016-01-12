@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var luke = require('./routes/luke');
 var folio = require('./routes/folio');
+var remwell = require('./routes/remwell');
 
 var app = express();
 
@@ -34,10 +35,12 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 app.use(express.static('public'));
+app.use(express.static('uploads'));
 
 app.use('/', routes);
 app.use('/portfolio',folio);
 app.use('/luke', luke);
+app.use('/remwell',remwell);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

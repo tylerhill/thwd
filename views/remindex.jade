@@ -1,0 +1,10 @@
+extends remlayout
+
+block content
+  #grid
+    each post in posts
+      a(href='/remwell/post/#{post.id}')
+        article.item
+          h1= post.title
+          img(src='/post#{post.id}/header.jpg')
+          p= post.capt

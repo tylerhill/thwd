@@ -66,6 +66,7 @@ a {
   top: 50%;
   -webkit-transform: translateY(-50%); 
   transform: translateY(-50%); 
+  width: 90%;
   font-size: 5vmin;
   color: #BACEB0;
   padding: 0 5%;
