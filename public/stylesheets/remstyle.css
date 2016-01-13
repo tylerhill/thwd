@@ -20,6 +20,7 @@ header {
     padding: 0;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     vertical-align: bottom;
     line-height: 1.2em;
@@ -55,9 +56,12 @@ article {
 
 #post {
   padding: 2%;
-  padding-top: 5.5%; }
+  padding-top: 5.5%;
+  width: 100%; }
   #post h1, #post p {
     margin: 2%;
     text-align: left; }
+  #post article {
+    width: 96%; }
 
 /*# sourceMappingURL=remstyle.css.map */

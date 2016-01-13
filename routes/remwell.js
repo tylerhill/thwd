@@ -25,7 +25,6 @@ router.get('/', function(req, res, next) {
     posts.push({id: row.rowid, title: row.title, capt: capt});
   },
   function() {
-    console.log(posts);
     res.render('remindex', { posts: posts });
   });
 });
