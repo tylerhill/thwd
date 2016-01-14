@@ -57,7 +57,6 @@ router.get('/post/:id', function(req,res,next) {
   var post;
   dbinst.get('select * from posts where rowid = (?)',current,function(err,row) {
     post = {id: current, title: row.title, capt: row.capt };
-    console.log(post);
     res.render('post', { post: post });
   });
 });

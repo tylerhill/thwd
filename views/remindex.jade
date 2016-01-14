@@ -2,9 +2,13 @@ extends remlayout
 
 block content
   #grid
-    each post in posts
-      a(href='/remwell/post/#{post.id}')
+    -for (var i=0; i<10; i++) {
+      a(href='/remwell/post/#{posts[i].id}')
         article.item
-          h1= post.title
-          img(src='/post#{post.id}/header.jpg')
-          p= post.capt
+          h1= posts[i].title
+          img(src='/post#{posts[i].id}/header.jpg')
+          p= posts[i].capt
+    -}
+
+
+
