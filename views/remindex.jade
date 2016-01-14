@@ -1,6 +1,8 @@
 extends remlayout
 
 block content
+  script.
+    var posts=#{posts};
   #grid
     -for (var i=0; i<10; i++) {
       a(href='/remwell/post/#{posts[i].id}')

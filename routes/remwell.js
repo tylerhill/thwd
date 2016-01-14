@@ -61,4 +61,15 @@ router.get('/post/:id', function(req,res,next) {
   });
 });
 
+router.get('/load/:index', function(req,res,next) {
+  var dbinst = req.app.get('db');
+  var index = req.params.index;
+  var posts = [];
+  dbinst.each('select rowid, * from posts limit 10 offset (?)',index,function(err,row) {
+    posts.push({id: row.rowid, title: row.title, capt: row.capt});
+  },function(){
+    res.send(posts);
+  });
+});
+
 module.exports = router;

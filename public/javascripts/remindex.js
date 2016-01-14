@@ -1,6 +1,8 @@
 jQuery(function($) {
 
   $(window).load(function() {
+    
+    alert(posts[0]);
 
     $('#grid').masonry({
       itemSelector: '.item',
@@ -14,7 +16,6 @@ jQuery(function($) {
       this.timeoutId = window.setTimeout(function() {
 
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
-          alert('bottom');
         }
 
       }, 200);
