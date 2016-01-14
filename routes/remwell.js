@@ -19,7 +19,7 @@ var upload = multer({ storage: storage });
 router.get('/', function(req, res, next) {
   var dbinst = req.app.get('db');
   var posts = [];
-  dbinst.each('select rowid, * from posts order by rowid desc', function(err,row) {
+  dbinst.each('select rowid, * from posts order by rowid desc limit 10', function(err,row) {
     var capt = row.capt.substring(0,300);
     capt = capt.concat('...');
     posts.push({id: row.rowid, title: row.title, capt: capt});
