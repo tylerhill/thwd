@@ -1,7 +1,8 @@
 jQuery(function($) {
 
   $(window).load(function() {
-    var index = 9; 
+    var index = document.getElementById('grid').firstChild.id;
+    index -= 10;
     var $grid = $('#grid').masonry({
       itemSelector: '.item',
       gutter: 10,
@@ -14,22 +15,31 @@ jQuery(function($) {
       this.timeoutId = window.setTimeout(function() {
 
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
-          $.get('/remwell/load/'+index,{}, function(data) {
-            $.each(data,function(index,post){
-              console.log(post.title);
-              var added = document.createElement('a');
-              added.href = 'dope';
-              var art = document.createElement('article');
-              art.className='item';
-              console.log(art);
-              var header = document.createElement('h1');
-              header.innerHTML = post.title;
-              art.appendChild(header);
-              added.appendChild(art);
-              document.getElementById('grid').appendChild(added);
-              $grid.masonry('appended',added);
+          if(index > 0) {
+            $.get('/remwell/load/'+index,{}, function(data) {
+              $.each(data,function(i,post){
+                console.log(post.title);
+                var added = document.createElement('a');
+                added.href = '/remwell/post/'+post.id;
+                var art = document.createElement('article');
+                art.className='item';
+                var header = document.createElement('h1');
+                header.innerHTML = post.title;
+                var img = document.createElement('img');
+                img.src = '/post'+post.id+'/header.jpg';
+                var capt = document.createElement('p');
+                capt.innerHTML = post.capt;
+                art.appendChild(header);
+                art.appendChild(img);
+                art.appendChild(capt);
+                added.appendChild(art);
+                document.getElementById('grid').appendChild(added);
+                $grid.masonry('appended',added);
+                index--;
+                console.log(index);
+              });
             });
-          });
+          }
         }
 
       }, 200);
