@@ -65,6 +65,7 @@ router.get('/load/:index', function(req,res,next) {
   var dbinst = req.app.get('db');
   var index = req.params.index;
   var posts = [];
+  console.log(index);
   dbinst.each('select rowid, * from posts order by rowid desc limit 10 offset (?)',index,function(err,row) {
     posts.push({id: row.rowid, title: row.title, capt: row.capt});
   },function(){

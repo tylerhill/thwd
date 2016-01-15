@@ -1,8 +1,7 @@
 jQuery(function($) {
 
   $(window).load(function() {
-    var index = document.getElementById('grid').firstChild.id;
-    index -= 10;
+    var index = 10;
     var $grid = $('#grid').masonry({
       itemSelector: '.item',
       gutter: 10,
@@ -15,7 +14,7 @@ jQuery(function($) {
       this.timeoutId = window.setTimeout(function() {
 
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
-          if(index > 0) {
+          if(index >= 0 ) {
             $.get('/remwell/load/'+index,{}, function(data) {
               $.each(data,function(i,post){
                 console.log(post.title);
@@ -35,8 +34,7 @@ jQuery(function($) {
                 added.appendChild(art);
                 document.getElementById('grid').appendChild(added);
                 $grid.masonry('appended',added);
-                index--;
-                console.log(index);
+                index++;
               });
             });
           }
