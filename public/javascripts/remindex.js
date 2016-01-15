@@ -34,8 +34,10 @@ jQuery(function($) {
                 added.appendChild(art);
                 document.getElementById('grid').appendChild(added);
                 $grid.masonry('appended',added);
+                $grid.masonry('layout');
                 index++;
               });
+            $grid.masonry('layout');
             });
           }
         }
