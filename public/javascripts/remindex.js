@@ -37,9 +37,9 @@ jQuery(function($) {
                 $grid.masonry('layout');
                 index++;
               });
-            $grid.masonry('layout');
             });
           }
+        $grid.masonry('layout');
         }
 
       }, 200);
