@@ -25,7 +25,7 @@ jQuery(function($) {
                 var header = document.createElement('h1');
                 header.innerHTML = post.title;
                 var img = document.createElement('img');
-                img.src = '/post'+post.id+'/header.jpg';
+                img.src = '/post'+post.id+'/thumb.jpg';
                 var capt = document.createElement('p');
                 capt.innerHTML = post.capt;
                 art.appendChild(header);
