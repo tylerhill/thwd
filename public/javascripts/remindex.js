@@ -5,7 +5,8 @@ jQuery(function($) {
     var $grid = $('#grid').masonry({
       itemSelector: '.item',
       gutter: 10,
-      columnWidth: 250
+      columnWidth: 250,
+      containerStyle: null
     });
 
     $(window).scroll(function() {
@@ -38,6 +39,7 @@ jQuery(function($) {
               });
             });
           }
+        $grid.masonry('layout'); 
         }
 
       }, 200);
