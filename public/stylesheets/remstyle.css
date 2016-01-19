@@ -38,6 +38,7 @@ nav, .item {
   margin-bottom: 10px; }
 
 #grid {
+  position: relative;
   padding: 2%;
   padding-right: 1%;
   padding-top: 5.5%;
