@@ -75,7 +75,7 @@ nav ul li {
   box-shadow: 0px 0 5px;
   overflow-y: scroll; }
   #cont a {
-    display: inline-block; }
+    display: block; }
 
 #bio p {
   margin: 5%; }
@@ -126,5 +126,8 @@ iframe {
 #map {
   height: 100%;
   width: 100%; }
+
+#recent {
+  padding: 5%; }
 
 /*# sourceMappingURL=luke.css.map */

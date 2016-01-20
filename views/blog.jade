@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  each post, index in posts
-     a(href='/luke/blog/#{index}') #{post.title}
+  #recent
+    each post, index in posts
+       a(href='/luke/blog/#{index}') #{post.title}
   #curPost
     if current
       h1= posts[current].title
